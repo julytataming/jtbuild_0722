@@ -1742,7 +1742,7 @@ containing a value of this type.
         public static final int abc_select_dialog_material=0x7f030018;
         public static final int customview=0x7f030019;
         public static final int fragment=0x7f03001a;
-        public static final int home_activity=0x7f03001b;
+        public static final int login_activity=0x7f03001b;
         public static final int main=0x7f03001c;
         public static final int main_activity=0x7f03001d;
         public static final int notification_media_action=0x7f03001e;
