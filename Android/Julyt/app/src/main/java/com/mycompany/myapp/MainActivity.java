@@ -18,11 +18,15 @@ public class MainActivity extends AppCompatActivity{
 		Toolbar mtoolbar;
 		FragmentTransaction ft;
 		ActionBarDrawerToggle abdt;
+		
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+				//View
+				
+				
 				
 				//cara membuat view: View v = getLayoutInflater().inflate(R.layout.main_activity,null);
 				
