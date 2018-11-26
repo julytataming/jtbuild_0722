@@ -1594,17 +1594,18 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020043;
         public static final int abc_textfield_search_material=0x7f020044;
         public static final int button=0x7f020045;
-        public static final int custom_toast=0x7f020046;
-        public static final int editxt=0x7f020047;
-        public static final int ic_launcher=0x7f020048;
-        public static final int laylogin=0x7f020049;
-        public static final int loguser=0x7f02004a;
-        public static final int notification_template_icon_bg=0x7f020050;
-        public static final int round_button=0x7f02004b;
-        public static final int round_layout_otp=0x7f02004c;
-        public static final int round_layout_white_otp=0x7f02004d;
-        public static final int toast=0x7f02004e;
-        public static final int toolbar=0x7f02004f;
+        public static final int custom_dialog_background=0x7f020046;
+        public static final int custom_toast=0x7f020047;
+        public static final int editxt=0x7f020048;
+        public static final int ic_launcher=0x7f020049;
+        public static final int laylogin=0x7f02004a;
+        public static final int loguser=0x7f02004b;
+        public static final int notification_template_icon_bg=0x7f020051;
+        public static final int round_button=0x7f02004c;
+        public static final int round_layout_otp=0x7f02004d;
+        public static final int round_layout_white_otp=0x7f02004e;
+        public static final int toast=0x7f02004f;
+        public static final int toolbar=0x7f020050;
     }
     public static final class id {
         public static final int Toastxt=0x7f0b006c;

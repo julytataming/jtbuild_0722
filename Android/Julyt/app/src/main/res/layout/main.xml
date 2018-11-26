@@ -12,6 +12,8 @@
 				android:fitsSystemWindows="true"
         android:layout_height="?attr/actionBarSize"
 				android:theme="@style/ToolbarTheme"
+				app:popupTheme="@style/ToolbarTheme"
+				
 				android:background="?attr/colorPrimary"/>
 		<FrameLayout 
 				android:id="@+id/mainfr"

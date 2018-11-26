@@ -5,6 +5,11 @@
 				<item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+				<item name="android:itemBackground">#279ECA</item>
+				<item name="android:textColor">#333333</item>
+				<item name="contentInsetStart">1dp</item>
+        <item name="contentInsetEnd">1dp</item>
+				
     </style>
 
     <style name="CustomTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -14,7 +19,7 @@
 		
 		<style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Light">
 				<!-- android:textColorPrimary adalah warna teks title yang ada di Toolbar  -->
-				<item name="android:textColorPrimary">#000000</item>
+				<item name="android:textColorPrimary">#FFFFFF</item>
 				<!-- actionMenuTextColor adalah warna teks action (menu item)  -->
 				<item name="actionMenuTextColor">@android:color/holo_green_light</item>
 				<!-- Memberi warna accent untuk input field seperti checkbox -->

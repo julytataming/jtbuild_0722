@@ -3,11 +3,13 @@ import android.app.*;
 import android.content.*;
 import android.graphics.drawable.*;
 import android.support.v4.app.*;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.*;
 import android.view.*;
 import android.widget.*;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.appcompat.*;
@@ -21,7 +23,7 @@ public class JtoolFragment extends Fragment implements toast{
 		String a;
 		Dialog dialog;
 		View dialogview;
-		
+		FragmentManager Fragmanager;
 		
 		//Constructor
 		public JtoolFragment(Activity ac){	
@@ -37,8 +39,23 @@ public class JtoolFragment extends Fragment implements toast{
 		public JtoolFragment(Class cls){	
 				this.kelas = cls;
 		}
-		
-		
+		public JtoolFragment(FragmentManager frg){	
+				this.Fragmanager = frg;
+		}
+		public JtoolFragment(FragmentManager frg, Activity ac){	
+				this.Fragmanager = frg;
+				this.activity = ac;
+		}
+		public JtoolFragment(Context ctx, FragmentManager frg){	
+				this.context = ctx;
+				this.Fragmanager = frg;
+		}
+		public JtoolFragment(Context ctx,Activity ac,Class cls, FragmentManager frg){	
+				this.context = ctx;
+				this.activity = ac;
+				this.kelas = cls;
+				this.Fragmanager = frg;
+		}
 		
 		
 //Toast
@@ -94,7 +111,7 @@ public class JtoolFragment extends Fragment implements toast{
 				this.fram =frame;
 				this.frag=fr;
 				this.a=stack;
-				getFragmentManager().
+				Fragmanager.
 						beginTransaction().
 						replace(fram,frag).
 						addToBackStack(a).
@@ -130,4 +147,11 @@ public class JtoolFragment extends Fragment implements toast{
 				this.dialog.getWindow().setBackgroundDrawable(activity.getDrawable(R.drawable.laylogin));
 				this.dialog.show();
 		}
+		//DialogFragment
+		
+		public void buatDialogFragment(DialogFragment a){
+				a.show(Fragmanager,"");
+				
+		}
+		
 	}

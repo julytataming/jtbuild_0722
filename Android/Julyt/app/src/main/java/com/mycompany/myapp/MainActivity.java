@@ -1,14 +1,17 @@
 package com.mycompany.myapp;
 
+import android.graphics.*;
 import android.os.*;
 import android.support.v4.app.*;
 import android.support.v7.app.*;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.appcompat.*;
 import android.support.v7.widget.*;
+import android.text.*;
+import android.text.style.*;
 import android.view.*;
 import android.widget.*;
 
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.appcompat.R;
 import android.support.v7.widget.Toolbar;
 
@@ -55,12 +58,14 @@ public class MainActivity extends AppCompatActivity{
 		@Override
 		public boolean onCreateOptionsMenu(Menu menu){
 				getMenuInflater().inflate(R.menu.menu,menu);
+				MenuItem menutem = menu.findItem(R.id.item);
+				
 				return true;
+				
 		}
 
 		@Override
 		public boolean onOptionsItemSelected(MenuItem item){
-				
 				return super.onOptionsItemSelected(item);
 		}
 

@@ -6,6 +6,7 @@ import android.app.*;
 import android.content.*;
 import android.graphics.*;
 import android.os.*;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.*;
 import android.support.v7.appcompat.*;
 import android.text.*;
@@ -30,11 +31,12 @@ public class Home extends Fragment{
 		Activity iniFragment;
 		public Home(){
 				//konstruktor
-		}
+				}
 		
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 				View v = inflater.inflate(R.layout.login_activity,container,false);
+				this.jtool = new JtoolFragment(getActivity());
 				this.iniFragment = getActivity();
 				et1 = (EditText)v.findViewById(R.id.editxt1);
 				et2 = (EditText)v.findViewById(R.id.editxt2);
@@ -42,7 +44,6 @@ public class Home extends Fragment{
 				cb = (CheckBox)v.findViewById(R.id.cb);
 				et2.setInputType(InputType.TYPE_CLASS_TEXT);
 				et1.setInputType(InputType.TYPE_CLASS_TEXT);
-				jtool = new JtoolFragment(iniFragment);
 				jtool.showCustomPopUp("ToastWDrawable", getActivity().getLayoutInflater().inflate(R.layout.toast,null));
 				usernm = "julytataming";
 				sandi = "jtbuild";
@@ -69,7 +70,7 @@ public class Home extends Fragment{
 		public void onViewCreated(View view, Bundle savedInstanceState){
 				et1.setBackground(getActivity().getDrawable(R.drawable.editxt));
 				et2.setBackground(getActivity().getDrawable(R.drawable.editxt));
-				this.dialog.getWindow().setBackgroundDrawable(iniFragment. getDrawable(R.drawable.laylogin));
+				this.dialog.getWindow().setBackgroundDrawable(iniFragment. getDrawable(R.drawable.custom_dialog_background));
 	
 			}
 
@@ -89,16 +90,16 @@ public class Home extends Fragment{
 										}else if(usr.equals("")&&pw.equals("")){
 												Toast.makeText(getActivity(),"Masukan Username dan Password",Toast.LENGTH_SHORT).show();
 												
-												dialog.show();
-												
-										}else{ Toast.makeText(getActivity().getBaseContext(),"Coba Lagi",Toast.LENGTH_LONG).show(); }
+												//dialog.show();
+																		//fragmentAlert dialogFrag = new fragmentAlert();
+																		//dialogFrag.show(getFragmentManager(),"dialog");
+											JtoolFragment Jadev = new JtoolFragment(getFragmentManager());
+											Jadev.startFragment(R.id.mainfr,new Logined(),null);
+											
+											}else{ Toast.makeText(getActivity().getBaseContext(),"Coba Lagi",Toast.LENGTH_LONG).show(); }
 										btn.setShadowLayer(1,3,1,Color.parseColor("#000000"));
 										System.out.println("button 1"); 
-								}
-
-								
-
-
+								}							
 						});
 				
 
@@ -212,7 +213,41 @@ class nextFrag extends Fragment{
 
 }
 
+//Dialogfragment
+class fragmentAlert extends DialogFragment {
+		TextView txt;
+		public fragmentAlert(){}
+		public fragmentAlert ambilKonten(){
+				
+				return null;
+		}
+		
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+				View v = getActivity().getLayoutInflater().inflate(R.layout.custom_dialog,container,false);
+				txt = (TextView)v.findViewById(R.id.btn_okay);
+				fragmentAlert fra = new fragmentAlert();
+				
+				
+				return v;
+		}
 
+		@Override
+		public void onActivityCreated(Bundle savedInstanceState){
+					super.onActivityCreated(savedInstanceState);
+						txt.setOnClickListener(new View.OnClickListener(){
+								@Override
+								public void onClick(View p1){
+										JtoolFragment jt = new JtoolFragment(getActivity());
+										jt.showPopUp("This Is From dialogFragment");
+								}
+					});
+					
+		}
+		
+		
+		
+}
 
 
 
