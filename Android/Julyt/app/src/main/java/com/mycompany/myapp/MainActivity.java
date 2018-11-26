@@ -54,11 +54,11 @@ public class MainActivity extends AppCompatActivity{
 				//Fragment
 				getSupportFragmentManager().beginTransaction().add(R.id.mainfr, new Home()).addToBackStack("Fragment").setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
 		}
-
 		@Override
 		public boolean onCreateOptionsMenu(Menu menu){
 				getMenuInflater().inflate(R.menu.menu,menu);
 				MenuItem menutem = menu.findItem(R.id.item);
+				
 				
 				return true;
 				
